@@ -1,19 +1,24 @@
-# Estimating carbon emission of  Force Directed Layout Algorithms 
+# Enhanced Force Directed Layout Algorithms with Carbon Emission Visualization
 
-## Setup
-
-Before this package can be used, dependencies must be installed.
+## Dependencies
+To use this package, install the necessary dependencies:
 
 ```bash
 python3 -m pip install forcelayout
+python3 -m pip install PyQt6
+python3 -m pip install tkinter
+python3 -m pip install PIL
+python3 -m pip install codecarbon
+### Additional dependencies if any
+python3 -m pip install -r requirements.txt
 ```
-
 or
 
 ```bash
 python3 -m pip install -r requirements.txt
 ```
-
+`
+## Algorithms 
 Locations of the three main algorithms of this project:
 - [Chalmers' 1996 algorithm](https://ieeexplore.ieee.org/document/567787) is implemented in `forcelayout/algorithms/neighbour_sampling.py`
 - [Hybrid Layout algorithm](https://ieeexplore.ieee.org/document/1173161) is implemented in `forcelayout/algorithms/hybrid.py`
@@ -27,44 +32,16 @@ Locations of the three main algorithms of this project:
 
 Examples are contained in the `examples/` folder. Three command line scripts are included and a jupyter notebook.
 
-##### `examples/poker_hands_layout.py`
+nhanced Visualization and Carbon Emission Calculation
+Examples
+New scripts in the examples/ folder are added:
 
-This script will create a static layout of the poker hands dataset rendering using matplotlib. This shows the colouring functionality and annotations for each node when hovered. Nodes can be clicked to highlight other nodes based on the algorithm:
-- Chalmers' 1996: Highlight the nodes in the neighbour set for the selected node.
-- Hybrid: Highlight the nodes in the sample layout
-- Pivot: Highlight the pivot nodes
+com.py: The main script for launching the PyQt6-based GUI. It provides a user-friendly interface, integrating data handling, algorithm visualization, and carbon emission calculation.
 
-The size of dataset can be changed to any available size in `datasets/poker/` and the algorithms available are: `brute`, `chalmers96`, `hybrid` and `pivot`.
+data.py: Handles data processing using tkinter and PIL, and visualizes algorithm outcomes. It integrates codecarbon for real-time carbon emission tracking during algorithm execution.
 
-Run it using the following commands:
-```bash
-cd examples/
-# python3 poker_hands_layout.py [size] [brute | chalmers96 | hybrid | pivot]
-python3 poker_hands_layout.py 500 pivot
-```
+calculator.py: A dedicated PyQt6 widget for calculating and displaying carbon emissions. Offers interactive tools for users to input data and view the carbon footprint of different algorithms.
 
-##### `examples/animated_poker_hands_layout.py`
-
-This is similar to the above example but will show an animated version of the layout.
-
-```bash
-cd examples/
-# python3 poker_hands_layout.py [size] [brute | chalmers96 | hybrid | pivot]
-python3 animated_poker_hands_layout.py 500 pivot
-```
-
-##### `examples/iris_layout.py`
-
-This will show an animated layout of the iris dataset using Chalmers' 1996 algorithm, also an image will be saved of the final layout.
-
-```bash
-cd examples/
-python3 iris_layout.py
-```
-
-##### `examples/notebook_poker_layouts.ipynb`
-
-This is an example notebook creating layouts of the poker hands dataset. Jupyter notebook is required to run this which can be installed [here](https://jupyter.org/install).
 
 ### Testing
 
