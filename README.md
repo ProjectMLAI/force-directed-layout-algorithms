@@ -36,11 +36,14 @@ nhanced Visualization and Carbon Emission Calculation
 Examples
 New scripts in the examples/ folder are added:
 
-## com.py: The main script for launching the PyQt6-based GUI. It provides a user-friendly interface, integrating data handling, algorithm visualization, and carbon emission calculation.
+## com.py:
+The main script for launching the PyQt6-based GUI. It provides a user-friendly interface, integrating data handling, algorithm visualization, and carbon emission calculation.
 
-## data.py: Handles data processing using tkinter and PIL, and visualizes algorithm outcomes. It integrates codecarbon for real-time carbon emission tracking during algorithm execution.
+## data.py: 
+Handles data processing using tkinter and PIL, and visualizes algorithm outcomes. It integrates codecarbon for real-time carbon emission tracking during algorithm execution.
 
-## calculator.py: A dedicated PyQt6 widget for calculating and displaying carbon emissions. Offers interactive tools for users to input data and view the carbon footprint of different algorithms.
+## calculator.py:
+A dedicated PyQt6 widget for calculating and displaying carbon emissions. Offers interactive tools for users to input data and view the carbon footprint of different algorithms.
 
 
 ### Testing
